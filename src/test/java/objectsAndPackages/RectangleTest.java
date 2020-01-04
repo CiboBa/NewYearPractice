@@ -20,7 +20,7 @@ public class RectangleTest {
     @Test
     public void return30IfLength5AndWidth10() {
         Integer addResult = Rectangle.rectangleCircuit(5, 10);
-        Integer result = 50;
+        Integer result = 30;
         Assertions.assertEquals(result, addResult);
     }
     @Test
