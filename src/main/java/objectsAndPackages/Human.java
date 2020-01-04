@@ -8,46 +8,33 @@ class Human {
     private int weight;
     private int height;
     private String name;
-    private String maleOrFemale;
+    private boolean isMale;
 
-    public void setAge(int age) {
+    public Human(int age, int weight, int height, String name, boolean isMale) {
         this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.name = name;
+        this.isMale = isMale;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
     public int getWeight() {
         return weight;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     public int getHeight() {
         return height;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
     }
 
-    public static boolean isMale(String maleOrFemale) throws WrongSexException {
-        if (maleOrFemale.equals("M")) {
-            return true;
-        } else if (maleOrFemale.equals("F")) {
-            return false;
-        }
-        throw new WrongSexException(maleOrFemale);
+    public boolean isMale() {
+        return isMale;
     }
 }
