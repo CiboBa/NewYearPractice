@@ -10,39 +10,39 @@ class Human {
     private String name;
     private String maleOrFemale;
 
-    private void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    private int getAge() {
+    public int getAge() {
         return age;
     }
 
-    private void setWeight(int weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    private int getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    private void setHeight(int height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    private int getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
 
-    private boolean isMale(String maleOrFemale) throws WrongSexException {
+    public static boolean isMale(String maleOrFemale) throws WrongSexException {
         if (maleOrFemale.equals("M")) {
             return true;
         } else if (maleOrFemale.equals("F")) {
