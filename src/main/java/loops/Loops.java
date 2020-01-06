@@ -6,6 +6,19 @@ public class Loops {
         int a = 34;
         showDigitsToX(a);
         showDigitsToY(a);
+        printReversedNumber(a);
+    }
+
+    private static void printReversedNumber(int z) {
+        String zValueString = String.valueOf(z);
+        char[] zValueArray = new char[zValueString.length()];
+        for (int i = 0; i < zValueString.length(); i++) {
+            zValueArray[i] = zValueString.charAt(i);
+        }
+        for (char c : zValueArray) {
+            System.out.println(c);
+        }
+        System.out.println("---------------");
     }
 
     //2. Jeśli w zadaniu 1. użyłeś pętli for przerób tę metodę na while (lub odwrotnie).
@@ -17,6 +30,7 @@ public class Loops {
             i++;
         }
         System.out.println(y + " }");
+        System.out.println("---------------");
     }
 
     //1 .Utwórz metodę pobierającą dodatnią liczbę całkowitą X, która wyświetli na ekranie liczby od zera do X.
