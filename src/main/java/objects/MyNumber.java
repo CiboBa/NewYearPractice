@@ -1,4 +1,4 @@
-package objectsAndPackages;
+package objects;
 
 //Utwórz klasę o nazwie MyNumber, której jedyny konstruktor przyjmuje liczbę. Klasa powinna mieć następujące metody
 //MyNumber isOdd() – true jeśli atrybut jest nieparzysty,

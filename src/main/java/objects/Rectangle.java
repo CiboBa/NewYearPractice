@@ -1,4 +1,4 @@
-package objectsAndPackages;
+package objects;
 
 //Utwórz klasę reprezentującą prostokąt, musi posiadać atrybuty długość i szerokość.
 //Klasa powinna posiadać metody obliczające pole, obwód i długość przekątnej.
