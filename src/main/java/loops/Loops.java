@@ -3,7 +3,7 @@ package loops;
 public class Loops {
 
     public static void main(String[] args) {
-        int a = 34;
+        int a = 134;
         showDigitsToX(a);
         showDigitsToY(a);
         printReversedNumber(a);
@@ -15,8 +15,8 @@ public class Loops {
         for (int i = 0; i < zValueString.length(); i++) {
             zValueArray[i] = zValueString.charAt(i);
         }
-        for (char c : zValueArray) {
-            System.out.println(c);
+        for (int j = zValueArray.length - 1; j >= 0; j--) {
+            System.out.println(zValueArray[j]);
         }
         System.out.println("---------------");
     }
