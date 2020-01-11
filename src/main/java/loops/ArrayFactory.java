@@ -1,5 +1,6 @@
 package loops;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 //3. Napisz klasę ArrayFactory, która w konstruktorze pobierze liczbę całkowitą X. Klasa powinna mieć 2 metody:
@@ -12,8 +13,12 @@ public class ArrayFactory {
         printOneDimensionArray(oneDimensionArray);
         int[][] twoDimensionArray = twoDimension(i);
         printTwoDimensionArray(twoDimensionArray);
-        int[][] filledArray= fillUnitMatrix(twoDimensionArray);
+        int[][] filledArray = fillUnitMatrix(twoDimensionArray);
         printTwoDimensionArray(filledArray);
+        int[] checkBubbleSort = {5, 6, 7, 1, 4, 2, 9, 5, 7, 8, 6};
+        System.out.println(Arrays.toString(checkBubbleSort));
+        bubbleSort(checkBubbleSort);
+        System.out.println(Arrays.toString(checkBubbleSort));
     }
 
 
@@ -30,6 +35,7 @@ public class ArrayFactory {
         return new int[i][i];
     }
 
+    //9. Napisz metodę, która pobierze tablicę liczb całkowitych i wyświetli ją w postaci “[liczba, liczba, liczba]”,
     private static void printOneDimensionArray(int[] oneDimensionArray) {
         System.out.println(Arrays.toString(oneDimensionArray));
     }
@@ -54,5 +60,22 @@ public class ArrayFactory {
             }
         }
         return twoDimension;
+    }
+
+    //10. Napisz metodę, która pobierze tablicę liczb całkowitych i posortuje ją w kolejności od najmniejszej do największej liczby.
+    // Jednym z podstawowych algorytmów sortowania jest sortowanie bąbelkowe.
+    private static void bubbleSort(int[] oneDimensionArray) {
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 0; i < oneDimensionArray.length - 1; i++) {
+                if (oneDimensionArray[i] > oneDimensionArray[i + 1]) {
+                    int temp = oneDimensionArray[i];
+                    oneDimensionArray[i] = oneDimensionArray[i + 1];
+                    oneDimensionArray[i + 1] = temp;
+                    swapped = true;
+                }
+            }
+        } while (swapped);
     }
 }
